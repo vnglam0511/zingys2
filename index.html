@@ -20,28 +20,26 @@
 <body>
 
   <!-- Audio -->
-  <audio id="myAudio" src="https://github.com/vnglam0511/zingymp2-music/raw/refs/heads/main/C%E1%BB%A9%20Chill%20Th%C3%B4i.mp3></audio>
+  <audio id="myAudio" src="https://github.com/vnglam0511/zingymp1-music/raw/refs/heads/main/%C4%91%E1%BB%83%20t%C3%B4i%20%C3%B4m%20em%20b%E1%BA%B1ng%20giai%20%C4%91i%E1%BB%87u%20n%C3%A0y.mp3"></audio>
 
-  <!-- Button: ban đầu là pause (web-08.png) -->
+  <!-- Button -->
   <img id="playerBtn" src="web-08.png" alt="Play/Pause">
 
   <script>
     const audio = document.getElementById("myAudio");
     const btn = document.getElementById("playerBtn");
 
-    // Đường dẫn icon
-    const pauseImg = "web-08.png"; // icon pause
-    const playImg = "web-07.png";  // icon play
+    // Ảnh tạm: hình 1 (pause), hình 2 (play)
+    const pauseImg = "web-08.png"; // icon pause (ảnh 1)
+    const playImg = "web-07.png";  // icon play (ảnh 2)
 
-    let isPlaying = false; // trạng thái ban đầu: chưa phát
+    let isPlaying = false;
 
     btn.addEventListener("click", () => {
       if (isPlaying) {
-        // Nếu đang phát → dừng lại
         audio.pause();
         btn.src = pauseImg;
       } else {
-        // Nếu đang dừng → phát nhạc
         audio.play();
         btn.src = playImg;
       }
